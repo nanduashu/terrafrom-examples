@@ -3,14 +3,14 @@ variable "infrastructure_version" {
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = "ap-south-1"
 }
 
 terraform {
   backend "s3" {
     encrypt = true
     bucket  = "terraform-bluegreen"
-    region  = "us-east-1"
+    region  = "ap-south-1"
     key     = "v1"
   }
 }
